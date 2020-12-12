@@ -40,7 +40,7 @@ larger. If your model has high variance, you should consider regularization or p
 ### Regularization
 
 If you suspect your neural network is overfitting, one of the first things you should try is `regularization`. To add regularization 
-to logistic regression, you add $\frac{\lambda}{2m} { {\Vert w \Vert}_2 }^2$ to cost function $J(w,b) = \frac{1}{m} \sum_{i=1}^{m} 
+to logistic regression, you add $\frac{\lambda}{2m} { {\Vert w \Vert}_2 }^2 $ to cost function $J(w,b) = \frac{1}{m} \sum_{i=1}^{m} 
 \mathcal{L} (\hat{y}^{(i)}, y^{(i)})$, where $\lambda$ is a regularization parameter and ${ {\Vert w \Vert}_2 }^2 = \sum_{j=1}^{n_x} {w_j}^2 = w^T w$, 
 which is a square of Euclidean norm (or L2 norm) of the prime to vector $w$. This is also called the `L2 regularization`, which 
 is the most common type regularization. 
@@ -52,8 +52,8 @@ store the model.
 
 $\lambda$ is called the `regularization parameter`, which is another hyperparameter that we might have to tune. 
 
-In neural network, you should add $\frac{\lambda}{2m} \sum_{l=1}^{L} { {\Vert w^{[l]} \Vert}_F }^2$ to cost function, where ${ {\Vert w^{[l]} \Vert}_F }^2 = 
-\sum_{i=1}^{n^{[l]}} \sum_{j=1}^{[l-1]} {(w_{i,j})^{[l]}}^2$, which is also called **Frobenius norm**. 
+In neural network, you should add $\frac{\lambda}{2m} \sum_{l=1}^{L} { {\Vert w^{[l]} \Vert}_F }^2 $ to cost function, where ${ {\Vert w^{[l]} \Vert}_F }^2 = 
+\sum_{i=1}^{n^{[l]}} \sum_{j=1}^{[l-1]} {(w_{i,j})^{[l]}}^2 $, which is also called **Frobenius norm**. 
 
 To apply regularization in gradient descent, we add $\frac{\lambda}{m} W^{[l]}$ to $d W^{[l]}$ in back propagation. If we apply 
 this to gradient descent, whatever the matrix $w$ is, it's going to be smaller, and that's why we also call L2 regularization 
@@ -94,9 +94,9 @@ dev set error and stop at some point that looks optimal.
 
 1) Subtract out or to zero out the mean. $\mu = \frac{1}{m} \sum_{i=1}^{m} x^{(i)}$, $x := x - \mu$
 
-2) Normalize variance. $\sigma^2 = \frac{1}{m} \sum_{i=1}^{m} {x^{(i)}}^2$, $x /= \sigma$
+2) Normalize variance. $\sigma^2 = \frac{1}{m} \sum_{i=1}^{m} (x^{(i)})^2 $, $x\ /= \sigma$
 
-In short, replace $x$ to $\frac{x-\mu}{\sigma}.
+In short, replace $x$ to $\frac{x-\mu}{\sigma}$.
 
 
 ![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/dl2108.png)
@@ -114,7 +114,7 @@ difficult.
 ![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/dl2109.png)
 
 For the simplicity, suppose we use a linear activation function. Then, output $y$ should be similar to $W^{[l]} W^{[l-1]} \cdots 
-W^{[2]} W^{[1]}$. If we keep multiplying numbers, it will become exponentially big if the numbers are bigger than 1, or close 
+W^{[2]} W^{[1]}$. If we keep multiplying numbers, it will become exponentially big if the numbers are bigger than $1$, or close 
 to zero if we keep multiplying numbers between $0$ and $1$. For long time, this was a hugh barrier to train deep neural 
 networks.
 
@@ -133,7 +133,7 @@ of back propagation is correct. Take $W^{[1]}, b^{[1]}, \cdots , W^{[L]}, b^{[L]
 take $d W^{[1]}, d b^{[1]}, \cdots , d W^{[L]}, d b^{[L]}$ and reshape into a big vector $d \theta$. 
 
 For each $i$: $d \theta_{approx}[i] = \frac{J(\theta_1 , \theta_2 , \cdots, \theta_i + \epsilon , \cdots) - J(\theta_1 , 
-\theta_2 , \cdots, \theta_i - \epsilon , \cdots)}{2 \epsilon}$ \approx d \theta [i] = \frac{\partial J}{\partial \theta_i}$.
+\theta_2 , \cdots, \theta_i - \epsilon , \cdots)}{2 \epsilon} \approx d \theta [i] = \frac{\partial J}{\partial \theta_i}$.
 
 Check $\frac{ {\Vert d \theta_{approx} - d \theta \Vert}_2 }{ {\Vert d \theta_{approx} \Vert}_2 + {\Vert d \theta \Vert}_2 }$. 
 If this value is close to $10^{-7}$, it means that the derivative approximation is very likely to correct. If it's close to 
