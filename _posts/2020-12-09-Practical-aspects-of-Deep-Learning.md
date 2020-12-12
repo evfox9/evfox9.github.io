@@ -43,7 +43,7 @@ If you suspect your neural network is overfitting, one of the first things you s
 to logistic regression, you add $\frac{\lambda}{2m} { \Vert w \Vert_2 }^2 $ to cost function $J(w,b) = \frac{1}{m} \sum_{i=1}^{m} 
 \mathcal{L} (\hat{y}^{(i)}, y^{(i)})$, where $\lambda$ is a regularization parameter and ${ \Vert w \Vert_2 }^2 = \sum_{j=1}^{n_x} {w_j}^2 = w^T w$, 
 which is a square of Euclidean norm (or L2 norm) of the prime to vector $w$. This is also called the `L2 regularization`, which 
-is the most common type regularization. 
+is the most common type of regularization. 
 
 There is also `L1 regularization`, which adds $\frac{\lambda}{m} \sum_{i=1}^{n_x} |w| = 
 \frac{\lambda}{m} { \Vert w \Vert_1 }$. If you use L1 regularization, the $w$ will end up being sparse, which means $w$ has 
@@ -76,7 +76,7 @@ Dropout regularization works because we can't rely on any one feature, so have t
 
 ![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/dl2105.png)
 
-`Data augmentation` is a useful technique when you need more training data, when getting more data is expensive or impossible. 
+`Data augmentation` is a useful technique when you need more training data but getting more data is expensive or impossible. 
 For example, when we train image data, you can augment the dataset by flip, rotate, crop or distort the existing data.
 
 ![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/dl2106.png)
