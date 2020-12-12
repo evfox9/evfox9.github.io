@@ -78,9 +78,8 @@ momentum, minibatch size, regularization, etc.
 
 ## Programming Assignment
 
-[Github link](https://github.com/evfox9/Coursera/blob/master/Deep_Learning/Neural_Networks_and_Deep_Learning/Building_your_Deep_Neural_Network_Step_by_Step.ipynb)
-
-[Github link](https://github.com/evfox9/Coursera/blob/master/Deep_Learning/Neural_Networks_and_Deep_Learning/Deep_Neural_Network_Application.ipynb)
+[Building_your_Deep_Neural_Network_Step_by_Step](https://github.com/evfox9/Coursera/blob/master/Deep_Learning/Neural_Networks_and_Deep_Learning/Building_your_Deep_Neural_Network_Step_by_Step.ipynb), 
+[Deep_Neural_Network_Application](https://github.com/evfox9/Coursera/blob/master/Deep_Learning/Neural_Networks_and_Deep_Learning/Deep_Neural_Network_Application.ipynb)
 
 ---
 
