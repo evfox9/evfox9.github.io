@@ -52,7 +52,7 @@ store the model.
 
 $\lambda$ is called the `regularization parameter`, which is another hyperparameter that we might have to tune. 
 
-In neural network, you should add $\frac{\lambda}{2m} \sum_{l=1}^{L} { {\Vert w^{[l]} \Vert}_F }^2 $ to cost function, where ${ {\Vert w^{[l]} \Vert}_F }^2 = 
+In neural network, you should add $\frac{\lambda}{2m} \sum_{l=1}^{L} { \Vert w^{[l]} \Vert_F }^2 $ to cost function, where ${ \Vert w^{[l]} \Vert_F }^2 = 
 \sum_{i=1}^{n^{[l]}} \sum_{j=1}^{[l-1]} {(w_{i,j})^{[l]}}^2 $, which is also called **Frobenius norm**. 
 
 To apply regularization in gradient descent, we add $\frac{\lambda}{m} W^{[l]}$ to $d W^{[l]}$ in back propagation. If we apply 
@@ -94,7 +94,7 @@ dev set error and stop at some point that looks optimal.
 
 1) Subtract out or to zero out the mean. $\mu = \frac{1}{m} \sum_{i=1}^{m} x^{(i)}$, $x := x - \mu$
 
-2) Normalize variance. $\sigma^2 = \frac{1}{m} \sum_{i=1}^{m} (x^{(i)})^2 $, $x\ /= \sigma$
+2) Normalize variance. $\sigma^2 = \frac{1}{m} \sum_{i=1}^{m} (x^{(i)})^2 $, $x := \frac{x}{\sigma}$
 
 In short, replace $x$ to $\frac{x-\mu}{\sigma}$.
 
@@ -124,7 +124,7 @@ ways that significantly reduce the vanishing / exploding gradient problem, altho
 
 One example of weight initialization is to set the variance of $W_i$ to be equal to $\frac{1}{n}$. When you use ReLU as a 
 activation function, using $\frac{2}{n}$ for the variance of $W_i$ works better. If you are using a tanh activation function,
-using $\sqrt{\frac{1}{n^{[l-1]}}}$ works better, which is **Xavier initialization**.
+using $\sqrt{\frac{1}{n^{[l-1]}}}$ works better, and this is called **Xavier initialization**.
 
 ### Gradient Checking
 
@@ -135,7 +135,7 @@ take $d W^{[1]}, d b^{[1]}, \cdots , d W^{[L]}, d b^{[L]}$ and reshape into a bi
 For each $i$: $d \theta_{approx}[i] = \frac{J(\theta_1 , \theta_2 , \cdots, \theta_i + \epsilon , \cdots) - J(\theta_1 , 
 \theta_2 , \cdots, \theta_i - \epsilon , \cdots)}{2 \epsilon} \approx d \theta [i] = \frac{\partial J}{\partial \theta_i}$.
 
-Check $\frac{ {\Vert d \theta_{approx} - d \theta \Vert}_2 }{ {\Vert d \theta_{approx} \Vert}_2 + {\Vert d \theta \Vert}_2 }$. 
+Check $\frac{ \Vert d \theta_{approx} - d \theta \Vert_2 }{ \Vert d \theta_{approx} \Vert_2 + \Vert d \theta \Vert_2 }$. 
 If this value is close to $10^{-7}$, it means that the derivative approximation is very likely to correct. If it's close to 
 $10^{-5}$, it needs a careful look. If it's close to or bigger than $10^{-3}$, there might be a bug somewhere. 
 
