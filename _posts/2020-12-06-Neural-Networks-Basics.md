@@ -64,8 +64,8 @@ of the entire training set. We can write cost function as $J(w,b)=\frac{1}{m} \s
 
 ![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/dl1204.png)
 
-It seems natural that we want to minimize the cost function $J(w,b) = -\frac{1}{m} \Sigma{i=1}^{m} y^{(i)} log{\hat{y}^{(i)}} 
-+ (1 - y^{(i)}) log{(1 - \hat{y}^{(i)})}$. This cost function $J$ turns out to be a convex function, so no matter where we initialize 
+It seems natural that we want to minimize the cost function $J(w,b) = - \frac{1}{m} \sum_{i=1}^{m} y^{(i)} \log{\hat{y}^{(i)}} + 
+(1 - y^{(i)}) \log{(1 - \hat{y}^{(i)})} $. This cost function $J$ turns out to be a convex function, so no matter where we initialize 
 the function, we should get to roughly the same point. `Gradient descent` starts at the initial point and takes a step in the 
   steepest downhill direction. 
 
@@ -86,7 +86,7 @@ We can expand this method to $m$ examples.
 > For $i = 1$ to $m$
 >   $z^{(i)} = w^T x^{i} + b$
 >   $a^{(i)} = \sigma(z^{(i)})$
->   $J += -(y^{(i) \log{a^{(i)}} + (1 - y^{(i)}) \log{(1 - a^{(i)}))$
+>   $J \+= -(y^{(i) \log{a^{(i)}} + (1 - y^{(i)}) \log{(1 - a^{(i)})) $
 >   $d z^{(i)} = a^{(i)} - y^{(i)}$
 >   $d w_1 += {x_1}^{(i)} d z^{(i)}$
 >   $d w_2 += {x_2}^{(i)} d z^{(i)}$
