@@ -76,7 +76,7 @@ To apply gradient descent, we repeat updating the parameters by $w := w - \alpha
 
 ![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/dl1206.png)
 
-From the graph above, we can easily show that $da = \frac{\partial \mathcal{L}(a,y)}{\partial a} = - frac{y}{a} + frac{1-y}{1-a}$ 
+From the graph above, we can easily show that $da = \frac{\partial \mathcal{L}(a,y)}{\partial a} = - \frac{y}{a} + \frac{1-y}{1-a}$ 
 and $dz = \frac{\partial \mathcal{L}(a,y)}{\partial z} = \frac{\partial \mathcal{L}}{\partial a} \times \frac{\partial a}{\partial z} 
 = (- \frac{y}{a} + \frac{1-y}{1-a}) \times (a(1-a)) = a - y$.
 
