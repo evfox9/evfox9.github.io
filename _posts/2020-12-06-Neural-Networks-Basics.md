@@ -86,7 +86,7 @@ We can expand this method to $m$ examples.
 > For $i = 1$ to $m$
 >   $z^{(i)} = w^T x^{i} + b$
 >   $a^{(i)} = \sigma(z^{(i)})$
->   $J += -[y^{(i) \log{a^{(i)}} + (1 - y^{(i)}) \log{(1 - a^{(i)})]$
+>   $J += -(y^{(i) \log{a^{(i)}} + (1 - y^{(i)}) \log{(1 - a^{(i)}))$
 >   $d z^{(i)} = a^{(i)} - y^{(i)}$
 >   $d w_1 += {x_1}^{(i)} d z^{(i)}$
 >   $d w_2 += {x_2}^{(i)} d z^{(i)}$
@@ -124,16 +124,10 @@ operations.
 
 ## Programming Assignment
 
-[Github link](https://github.com/evfox9/Coursera/blob/master/Deep_Learning/Neural_Networks_and_Deep_Learning/Logistic_Regression_with_a_Neural_Network_mindset.ipynb)
+[Logistic_Regression_with_a_Neural_Network_mindset](https://github.com/evfox9/Coursera/blob/master/Deep_Learning/Neural_Networks_and_Deep_Learning/Logistic_Regression_with_a_Neural_Network_mindset.ipynb)
 
 ---
 
 ## References
 
 [Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning)
-
-
-
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
