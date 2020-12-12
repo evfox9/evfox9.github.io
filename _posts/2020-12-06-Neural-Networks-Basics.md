@@ -82,7 +82,7 @@ and $dz = \frac{\partial \mathcal{L}(a,y)}{\partial z} = \frac{\partial \mathcal
 
 We can expand this method to $m$ examples. 
 
-> $J = 0,/ d w_1 = 0,/ d w_2 = 0,/ db = 0$
+> $J = 0,\ d w_1 = 0,\ d w_2 = 0,\ db = 0$
 >
 > For $i = 1$ to $m$:
 >
@@ -90,7 +90,7 @@ We can expand this method to $m$ examples.
 >
 >   $a^{(i)} = \sigma(z^{(i)})$
 >
->   $J += \- ( y^{(i) \log{a^{(i)}} + (1 - y^{(i)}) \log{(1 - a^{(i)} ) } ) $
+>   $J += - ( y^{(i)} \log{a^{(i)}} + (1 - y^{(i)}) \log{(1 - a^{(i)} ) } ) $
 >
 >   $d z^{(i)} = a^{(i)} - y^{(i)}$ 
 >
