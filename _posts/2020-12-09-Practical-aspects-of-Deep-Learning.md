@@ -135,7 +135,7 @@ take $d W^{[1]}, d b^{[1]}, \cdots , d W^{[L]}, d b^{[L]}$ and reshape into a bi
 For each $i$: $d \theta_{approx}[i] = \frac{J(\theta_1 , \theta_2 , \cdots, \theta_i + \epsilon , \cdots) - J(\theta_1 , 
 \theta_2 , \cdots, \theta_i - \epsilon , \cdots)}{2 \epsilon}$ \approx d \theta [i] = \frac{\partial J}{\partial \theta_i}$.
 
-Check $\frac{{\Vert d \theta_{approx} - d \theta \Vert}_2}{{\Vert d \theta_{approx} \Vert}_2 + {\Vert d \theta \Vert}_2}$. 
+Check $\frac{ {\Vert d \theta_{approx} - d \theta \Vert}_2 }{ {\Vert d \theta_{approx} \Vert}_2 + {\Vert d \theta \Vert}_2 }$. 
 If this value is close to $10^{-7}$, it means that the derivative approximation is very likely to correct. If it's close to 
 $10^{-5}$, it needs a careful look. If it's close to or bigger than $10^{-3}$, there might be a bug somewhere. 
 
