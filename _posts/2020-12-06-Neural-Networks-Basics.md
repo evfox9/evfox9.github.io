@@ -58,7 +58,7 @@ y^{(2)}), \cdots , (x^{(m)}, y^{(m)})$ is given. We can define `loss(error) func
 doing. In logistic regression, we define loss function as $\mathcal{L}(\hat{y}, y) = -(y \log{\hat{y}} + (1 - y) \log{(1 - \hat{y})})$.
 
 While loss function computes the error of a single training example, the `cost function` is the average of the loss functions 
-of the entire training set. We can write cost function as $J(w,b)=\frac{1}{m} \Sigma{i=1}^{m} \mathcal{L}(\hat{y}^{(i)}, y^{(i)})$.
+of the entire training set. We can write cost function as $J(w,b)=\frac{1}{m} \sum_{i=1}^{m} \mathcal{L}(\hat{y}^{(i)}, y^{(i)})$.
 
 ### Gradient Descent
 
