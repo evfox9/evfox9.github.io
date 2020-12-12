@@ -83,15 +83,25 @@ and $dz = \frac{\partial \mathcal{L}(a,y)}{\partial z} = \frac{\partial \mathcal
 We can expand this method to $m$ examples. 
 
 > $J = 0,/ d w_1 = 0,/ d w_2 = 0,/ db = 0$
-> For $i = 1$ to $m$
+>
+> For $i = 1$ to $m$:
+>
 >   $z^{(i)} = w^T x^{i} + b$
+>
 >   $a^{(i)} = \sigma(z^{(i)})$
->   $J += -(y^{(i) \log{a^{(i)}} + (1 - y^{(i)}) \log{(1 - a^{(i)})}) $
->   $d z^{(i)} = a^{(i)} - y^{(i)}$
->   $d w_1 += {x_1}^{(i)} d z^{(i)}$
+>
+>   $J += \- ( y^{(i) \log{a^{(i)}} + (1 - y^{(i)}) \log{(1 - a^{(i)} ) } ) $
+>
+>   $d z^{(i)} = a^{(i)} - y^{(i)}$ 
+>
+>   $d w_1 += {x_1}^{(i)} d z^{(i)}$ 
+>
 >   $d w_2 += {x_2}^{(i)} d z^{(i)}$
+>
 >   $db += d z^{(i)}$
+>
 > $J /= m$
+>
 > $d w_1 /= m$
 
 ## Python and Vectorization
