@@ -43,9 +43,3 @@ networks much faster. For example, switching from a sigmoid function to ReLU fun
 ### References
 
 [Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning)
-
-
-
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
