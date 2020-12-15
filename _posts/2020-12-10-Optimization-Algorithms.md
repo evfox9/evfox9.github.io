@@ -92,7 +92,8 @@ $V_{dW}^{corrected} = \frac{V_{dW}}{(1 - \beta_{1}^{t})},\ V_{db}^{corrected} = 
 
 $S_{dW}^{corrected} = \frac{S_{dW}}{(1 - \beta_{2}^{t})},\ S_{db}^{corrected} = \frac{S_{db}}{(1 - \beta_{2}^{t})}$
 
-$W := W - \alpha \frac{ V_{dW}^{corrected} }{ \sqrt{S_{dW}^{corrected}} } + \epsilon } , \ b := b - \alpha \frac{ V_{db}^{corrected} }{ \sqrt{S_{db}^{corrected}} }$
+$W := W - \alpha \frac{ V_{dW}^{corrected} }{ \sqrt{ S_{dW}^{corrected} } + \epsilon } $
+$b := b - \alpha \frac{ V_{db}^{corrected} }{ \sqrt{ S_{db}^{corrected} } + \epsilon } $
 
 Hyperparameters choice: 
 
