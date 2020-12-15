@@ -92,7 +92,7 @@ $V_{dW}^{corrected} = \frac{V_{dW}}{(1 - \beta_{1}^{t})},\ V_{db}^{corrected} = 
 
 $S_{dW}^{corrected} = \frac{S_{dW}}{(1 - \beta_{2}^{t})},\ S_{db}^{corrected} = \frac{S_{db}}{(1 - \beta_{2}^{t})}$
 
-$W := W - \alpha \frac{V_{dW}^{corrected}}{\sqrt{S_{dW}^{corrected}} + \epsilon},\ b := b - \alpha \frac{V_{db}^{corrected}}{\sqrt{S_{db}^{corrected}}$
+$W := W - \alpha \frac{ V_{dW}^{corrected} }{ \sqrt{S_{dW}^{corrected}} } + \epsilon } , \ b := b - \alpha \frac{ V_{db}^{corrected} }{ \sqrt{S_{db}^{corrected}} }$
 
 Hyperparameters choice: 
 
@@ -110,7 +110,7 @@ One of the things that might help speed up your learning algorithm is to slowly 
 this **learning rate decay**. During the initial phases, you can afford to take much bigger steps, but as learning approaches 
 converges, then having a slower learning rate allows you to take smaller steps.  
 
-To implement this, you may use $\alpha = \frac{1}{1 + \text{decayRate \times \text{epochNum} } } \alpha_0$ and decay rate 
+To implement this, you may use $\alpha = \frac{1}{1 + \text{decayRate} \times \text{epochNum} } \alpha_0$ and decay rate 
 is a hyperparameter than you might need to tune. 
 
 There are other ways to implement learning rate decay as well. 
@@ -121,7 +121,7 @@ $\alpha = \frac{k}{\sqrt{epochNum}} \alpha_0$
 
 $\alpha = \frac{k}{\sqrt{t}} \alpha_0$
 
-There is technique that decrease the learning rate in discrete steps, and you can also manually control the learning rate.
+Moreover, there is technique that decrease the learning rate in discrete steps, and you can also manually control the learning rate.
 
 ### Problem of Local Optima
 
@@ -147,7 +147,7 @@ for a long time. This is where algorithms like momentum, RMSprop or Adam can rea
 
 ## Programming Assignment
 
-[Optimization](https://github.com/evfox9/Coursera/blob/master/Deep_Learning/Improving_Neural_Networks/Optimization.ipynb), 
+[Optimization](https://github.com/evfox9/Coursera/blob/master/Deep_Learning/Improving_Neural_Networks/Optimization.ipynb)
 
 ---
 ## References
