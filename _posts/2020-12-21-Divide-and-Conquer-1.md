@@ -199,7 +199,7 @@ $c, n_0 > 0 \ \text{s.t} \ T(n) \leq c \cdot f(n)$ for $\forall n \geq n_0$.
 
 Claim: if $T(n) = a_k n^k + \cdots + a_1 n + a_0$, then $T(n) = O(n^k)$.
 
-Proof: Choose $n_0 = 1$ and $c = | a_k | + | a_{k-1} | + \cdots + | a_1 | + | a_0 |$.
+Proof: Choose $n_0 = 1$ and $c = | a_k | + \cdots + | a_1 | + | a_0 |$.
 
 $\forall n \geq 1$,
 
