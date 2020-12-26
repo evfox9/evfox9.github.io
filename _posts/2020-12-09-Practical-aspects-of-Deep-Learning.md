@@ -40,19 +40,19 @@ larger. If your model has high variance, you should consider regularization or p
 ### Regularization
 
 If you suspect your neural network is overfitting, one of the first things you should try is **regularization**. To add regularization
-to logistic regression, you add $\frac{\lambda}{2m} {{\Vert w \Vert}_2}^2$ to cost function $J(w,b) = \frac{1}{m} \sum_{i=1}^{m}
-\mathcal{L} (\hat{y}^{(i)}, y^{(i)})$, where $\lambda$ is a regularization parameter and ${{\Vert w \Vert}_2}^2 = \sum_{j=1}^{n_x} {w_j}^2 = w^T w$,
+to logistic regression, you add $\frac{\lambda}{2m} {\Vert w \Vert_2}^2$ to cost function $J(w,b) = \frac{1}{m} \sum_{i=1}^{m}
+\mathcal{L} (\hat{y}^{(i)}, y^{(i)})$, where $\lambda$ is a regularization parameter and ${\Vert w \Vert_2}^2 = \sum_{j=1}^{n_x} {w_j}^2 = w^T w$,
 which is a square of Euclidean norm (or L2 norm) of the prime to vector $w$. This is also called the **L2 regularization**, which
 is the most common type regularization.
 
 There is also **L1 regularization**, which adds $\frac{\lambda}{m} \sum_{i=1}^{n_x} |w| =
-\frac{\lambda}{m} {{\Vert w \Vert}_1}$. If you use L1 regularization, the $w$ will end up being sparse, which means $w$ has
+\frac{\lambda}{m} {\Vert w \Vert_1}$. If you use L1 regularization, the $w$ will end up being sparse, which means $w$ has
 a lot of zeros and it can help with compressing the model, because the set of parameters are zero so you need less memory to
 store the model.
 
 $\lambda$ is called the **regularization parameter**, which is another hyperparameter that we might have to tune.
 
-In neural network, you should add $\frac{\lambda}{2m} \sum_{l=1}^{L} {{\Vert w^{[l]} \Vert}_F}^2$ to cost function, where ${{\Vert w^{[l]} \Vert}_F}^2 =
+In neural network, you should add $\frac{\lambda}{2m} \sum_{l=1}^{L} {\Vert w^{[l]} \Vert_F}^2$ to cost function, where ${\Vert w^{[l]} \Vert_F}^2 =
 \sum_{i=1}^{n^{[l]}} \sum_{j=1}^{[l-1]} {(w_{i,j})^{[l]}}^2$, which is also called **Frobenius norm**.
 
 To apply regularization in gradient descent, we add $\frac{\lambda}{m} W^{[l]}$ to $d W^{[l]}$ in back propagation. If we apply
@@ -135,7 +135,7 @@ take $d W^{[1]}, d b^{[1]}, \cdots , d W^{[L]}, d b^{[L]}$ and reshape into a bi
 For each $i$: $d \theta_{approx}[i] = \frac{J(\theta_1 , \theta_2 , \cdots, \theta_i + \epsilon , \cdots) - J(\theta_1 ,
 \theta_2 , \cdots, \theta_i - \epsilon , \cdots)}{2 \epsilon}$ \approx d \theta [i] = \frac{\partial J}{\partial \theta_i}$.
 
-Check $\frac{{\Vert d \theta_{approx} - d \theta \Vert}_2}{{\Vert d \theta_{approx} \Vert}_2 + {\Vert d \theta \Vert}_2}$.
+Check $\frac{\Vert d \theta_{approx} - d \theta \Vert_2}{\Vert d \theta_{approx} \Vert_2 + \Vert d \theta \Vert_2}$.
 If this value is close to $10^{-7}$, it means that the derivative approximation is very likely to correct. If it's close to
 $10^{-5}$, it needs a careful look. If it's close to or bigger than $10^{-3}$, there might be a bug somewhere.
 
