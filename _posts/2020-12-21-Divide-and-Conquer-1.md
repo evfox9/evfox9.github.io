@@ -25,7 +25,7 @@ Input: two $n$-digit numbers $x$ and $y$
 
 Output: the product $xy$
 
-![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/al1101.png)
+![](https://raw.githubusercontent.com/evfox9/blog/master/algorithms/al1101.png)
 
 This is the integer multiplication algorithm that we learned in school. Number of operations overall grows like $c n^2$ for some constant $c$ and input length $n$.
 
@@ -33,7 +33,7 @@ Can we do better?
 
 ### Karatsuba's Multiplication
 
-![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/al1102.png)
+![](https://raw.githubusercontent.com/evfox9/blog/master/algorithms/al1102.png)
 
 This method is called **Karatsuba's multiplication**.
 
@@ -43,7 +43,7 @@ Input: array of $n$ numbers, unsorted
 
 Output: same numbers, sorted in increasing order
 
-![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/al1103.png)
+![](https://raw.githubusercontent.com/evfox9/blog/master/algorithms/al1103.png)
 
 #### Pseudocode for Merge
 
@@ -99,7 +99,7 @@ Asymptotic analysis: focus on running time for large input sizes $n$.
 
 E.g.: $6n \log_{2}{n} + 6n$ is better than $\frac{1}{2}n^2$
 
-![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/al1104.png)
+![](https://raw.githubusercontent.com/evfox9/blog/master/algorithms/al1104.png)
 
 Definition of a "fast algorithm" in this course is adopt these three biases as guiding principles.
 
