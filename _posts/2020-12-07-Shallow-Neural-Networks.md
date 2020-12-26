@@ -9,8 +9,8 @@ tags: AI Deep_Learning Coursera Deep_Learning_Specialization
 
 ![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/dl1301.png)
 
-We call the layers with input features $x_1, x_2, x_3$ as `input layer`. Layer in the middle are called 
-`hidden layer`. Layer on the right with only one node is called `output layer`. We don't count the input layer, so the neural 
+We call the layers with input features $x_1, x_2, x_3$ as **input layer**. Layer in the middle are called
+**hidden layer**. Layer on the right with only one node is called **output layer**. We don't count the input layer, so the neural
 network above is a 2-layer NN.
 
 ### Computing a Neural Network's Output
@@ -30,7 +30,7 @@ For $z^{[i]}$ which $i \geq 2$, $z^{[i]} = W^{[i]} a^{[i-1]}+ b^{[i]},\ a^{[i]} 
 
 ### Activation Functions
 
-`Activation function` is the function that defines the output of that node. Here are some examples of activation functions.
+**Activation function** is the function that defines the output of that node. Here are some examples of activation functions.
 
 #### Sigmoid
 
@@ -61,7 +61,7 @@ $$a = \max (0.01z,z)$$
 #### Why non-linear activation functions?
 
 Functions above are all non-linear functions. Activation functions should be non-linear because no matter how much you compose
-linear functions it will still be linear functions, so having many hidden layers won't have any meanings. Having non-linear 
+linear functions it will still be linear functions, so having many hidden layers won't have any meanings. Having non-linear
 function as activation function makes the model more expressive.
 
 ### Derivative of Activation functions
@@ -91,20 +91,28 @@ $$g'(z) = \begin{cases} 0.01 \ \text{if} \ z < 0 \\ 1 \ \text{if} \ z > 0 \end{c
 #### Forward Propagation
 
 $z^{[1]} = W^{[1]} x + b^{[1]}$
+
 $a^{[1]} = \sigma(z^{[1]})$.
+
 $z^{[2]} = W^{[2]} a^{[1]}+ b^{[2]}$
+
 $a^{[2]} = \sigma(z^{[2]})$.
 
 #### Backward Propagation
 
 $d z^{[2]} = A^{[2]} - Y$
-$d w^{[2]} = \frac{1}{m} d z^{[2]} A^{[1]T}$
-$d b^{[2]} = \frac{1}{m} \text{np.sum(}d z^{[2]} \text{, axis=1, keepdims=True)}$
-$d z^{[1]} = w^{[2]T} d z^{[2]} \times g^{[1]'} z^{[1]}$
-$d W^{[1]} = \frac{1}{m} d Z^{[1]} X^{[T]}$
-$d b^{[1]} = \frac{1}{m} \text{np.sum(} d z^{[1]} \text{, axis=1, keepdims=True)}$
 
-To keep the dimension of the matrix after sum operation, you should set the **keepdims** parameter to true. 
+$d w^{[2]} = \frac{1}{m} d z^{[2]} A^{[1]T}$
+
+$d b^{[2]} = \frac{1}{m}$ `np.sum`($d z^{[2]}$, axis=1, keepdims=True)
+
+$d z^{[1]} = w^{[2]T} d z^{[2]} \times g^{[1]'} z^{[1]}$
+
+$d W^{[1]} = \frac{1}{m} d Z^{[1]} X^{[T]}$
+
+$d b^{[1]} = \frac{1}{m}$ `np.sum`($d z^{[1]}$, axis=1, keepdims=True)
+
+To keep the dimension of the matrix after sum operation, you should set the `keepdims` parameter to true.
 
 ## Programming Assignment
 
