@@ -96,7 +96,7 @@ dev set error and stop at some point that looks optimal.
 
 2) Normalize variance. $\sigma^2 = \frac{1}{m} \sum_{i=1}^{m} {x^{(i)}}^2$, $x /= \sigma$
 
-In short, replace $x$ to $\frac{x-\mu}{\sigma}.
+In short, replace $x$ to $\frac{x-\mu}{\sigma}$.
 
 
 ![](https://raw.githubusercontent.com/evfox9/blog/master/deeplearning/dl2108.png)
@@ -133,7 +133,7 @@ of back propagation is correct. Take $W^{[1]}, b^{[1]}, \cdots , W^{[L]}, b^{[L]
 take $d W^{[1]}, d b^{[1]}, \cdots , d W^{[L]}, d b^{[L]}$ and reshape into a big vector $d \theta$.
 
 For each $i$: $d \theta_{approx}[i] = \frac{J(\theta_1 , \theta_2 , \cdots, \theta_i + \epsilon , \cdots) - J(\theta_1 ,
-\theta_2 , \cdots, \theta_i - \epsilon , \cdots)}{2 \epsilon}$ \approx d \theta [i] = \frac{\partial J}{\partial \theta_i}$.
+\theta_2 , \cdots, \theta_i - \epsilon , \cdots)}{2 \epsilon}$ $\approx d \theta [i] = \frac{\partial J}{\partial \theta_i}$.
 
 Check $\frac{\Vert d \theta_{approx} - d \theta \Vert_2}{\Vert d \theta_{approx} \Vert_2 + \Vert d \theta \Vert_2}$.
 If this value is close to $10^{-7}$, it means that the derivative approximation is very likely to correct. If it's close to
